@@ -1,0 +1,53 @@
+{
+  "name": "nextjs-mcp-dev-monitor",
+  "version": "1.0.0-alpha.1",
+  "description": "MCP server that monitors NextJS development server logs and automatically fixes errors",
+  "main": "dist/server.js",
+  "types": "dist/server.d.ts",
+  "bin": {
+    "nextjs-mcp-monitor": "./dist/server.js"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/server.ts",
+    "start": "node dist/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "mcp",
+    "nextjs",
+    "development",
+    "monitoring",
+    "auto-fix",
+    "typescript",
+    "eslint"
+  ],
+  "author": "NextJS MCP Dev Monitor Team",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0",
+    "@types/node": "^24.0.14",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.31.0",
+    "@types/jest": "^30.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "eslint": "^9.31.0",
+    "jest": "^30.0.4",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2"
+  }
+}
