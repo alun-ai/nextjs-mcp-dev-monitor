@@ -16,14 +16,7 @@ global.console = {
 // Setup environment variables for tests
 process.env.NODE_ENV = 'test';
 
-// Global test utilities
-declare global {
-  namespace jest {
-    interface Matchers<R> {
-      toMatchErrorPattern(expected: RegExp): R;
-    }
-  }
-}
+// Global test utilities - moved to separate declaration
 
 // Custom Jest matchers
 expect.extend({

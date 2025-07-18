@@ -17,14 +17,14 @@ export interface MCPToolResponse<T = unknown> {
 }
 
 export interface StartMonitoringInput {
-  projectPath: string;
+  projectPath?: string;
   config?: Partial<MonitorConfig>;
 }
 
 export interface StartMonitoringOutput {
   status: 'started' | 'already_running' | 'failed';
-  processId?: number;
-  monitoringUrl?: string;
+  processId?: number | undefined;
+  monitoringUrl?: string | undefined;
   message: string;
 }
 
@@ -60,14 +60,14 @@ export interface MonitorStatusInput {
 
 export interface MonitorStatusOutput {
   isRunning: boolean;
-  processId?: number;
-  uptime?: number;
-  projectPath?: string;
+  processId?: number | undefined;
+  uptime?: number | undefined;
+  projectPath?: string | undefined;
   metrics?: {
     errorsDetected: number;
     fixesApplied: number;
     successRate: number;
-  };
+  } | undefined;
 }
 
 export interface StopMonitoringInput {

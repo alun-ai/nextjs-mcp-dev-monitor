@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "types": "dist/server.d.ts",
   "bin": {
-    "nextjs-mcp-monitor": "./dist/server.js"
+    "nextjs-mcp-monitor": "dist/server.js"
   },
   "directories": {
     "doc": "docs",
@@ -36,7 +36,8 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.16.0",
     "@types/node": "^24.0.14",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "eslint": "^9.31.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
@@ -44,7 +45,6 @@
     "@types/jest": "^30.0.0",
     "@typescript-eslint/eslint-plugin": "^8.37.0",
     "@typescript-eslint/parser": "^8.37.0",
-    "eslint": "^9.31.0",
     "jest": "^30.0.4",
     "prettier": "^3.6.2",
     "ts-jest": "^29.4.0",

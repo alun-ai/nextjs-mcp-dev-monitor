@@ -135,3 +135,7 @@ test-reports/
 # Logs
 logs
 *.log
+
+# CLAUDE
+.envrc
+.mcp.json

@@ -7,6 +7,9 @@ export interface MonitorConfig {
   autoFix: boolean;
   safeMode: boolean;
   backupEnabled: boolean;
+  validateFixes: boolean;
+  backupRetentionDays: number;
+  maxFileSizeAfterFix: number;
   logLevel: LogLevel;
   excludePatterns: string[];
   includePatterns: string[];
@@ -43,6 +46,9 @@ export const DEFAULT_CONFIG: MonitorConfig = {
   autoFix: true,
   safeMode: true,
   backupEnabled: true,
+  validateFixes: true,
+  backupRetentionDays: 7,
+  maxFileSizeAfterFix: 1024 * 1024, // 1MB
   logLevel: 'info',
   excludePatterns: ['node_modules/**', 'dist/**', '.next/**'],
   includePatterns: ['src/**/*.ts', 'src/**/*.tsx', 'pages/**/*.ts', 'pages/**/*.tsx'],
